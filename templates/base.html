@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Shipping Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo">
+            <h2>Ecommerce Shipping Prediction</h2>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a href="{{ url_for('home') }}">  Home</a></li>
+                <li><i class="fa-regular fa-user"></i><a href="{{ url_for('about') }}">  About</a></li>
+                <li><i class="fa-regular fa-file"></i><a href="{{ url_for('prediction') }}">  Prediction</a></li>
+                <li><i class="fa-solid fa-server"></i><a href="{{ url_for('services') }}">  Services</a></li>
+                <li><i class="fa-regular fa-address-book"></i><a href="{{ url_for('contact') }}">  Contact</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            {% block content %}
+            {% endblock %}
+            
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/cbb3dc00bd.js" crossorigin="anonymous"></script>
+</body>
+</html>
+

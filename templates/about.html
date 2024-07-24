@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="about-page">
+        <h2>About</h2>
+        <p>Ecommerce shipping prediction is the process of estimating whether the product reached on time which is based on various factors such as the origin and destination of the package, the shipping method selected by the customer, the carrier used for shipping, and any potential delays or issues that may arise during the shipping process. Machine learning models can be used to make accurate predictions about shipping times based on historical data and real-time updates from carriers. These models may take into account factors such as weather conditions, traffic, and other external factors that can impact delivery times. Over All Ecommerce shipping prediction is an important tool for ecommerce businesses that want to provide accurate delivery estimates to their customers and improve their overall customer experience.</p>
+        <h3>Input fields</h3>
+        <p>The data used for predicting the reachability of product by the ML model is done using the following input fields.</p>
+        
+        <div class="input-fields">
+            <div>
+                <p>&#x27A4; <strong>Warehouse block:</strong> F,A,B,C,D</p>
+                <p>&#x27A4; <strong>Mode of shipment:</strong> Flight, Ship, Road</p>
+                <p>&#x27A4; <strong>Customer care calls:</strong> Integer value >1</p>
+                <p>&#x27A4; <strong>Customer rating:</strong> Integer value >1</p>
+                <p>&#x27A4; <strong>Cost of product:</strong> Integer value >1</p>
+            </div>
+            <div>
+                <p>&#x27A4; <strong>Prior purchases:</strong> Integer value >1</p>
+                <p>&#x27A4; <strong>Product Importance:</strong> Integer value >1</p>
+                <p>&#x27A4; <strong>Gender:</strong> Male or Female</p>
+                <p>&#x27A4; <strong>Discount Offered:</strong> Integer value >1</p>
+                <p>&#x27A4; <strong>Weight in Grams:</strong> Integer value than >1</p>
+            </div>
+        </div>
+
+        <p>After entering the above values you can start prediction process to check if your product will reach on time or not.</p>
+</div>
+{% endblock %}
+
+

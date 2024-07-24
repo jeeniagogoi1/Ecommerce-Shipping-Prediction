@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Prediction{% endblock %}
+{% block content %}
+<div class= "prediction-page">
+    <h1>Predict Shipping Time</h1>
+    <form action="/prediction" method="post">
+        <label for="Warehouse_block">Warehouse Block:</label>
+        <input type="text" id="Warehouse_block" name="Warehouse_block" required><br><br>
+
+        <label for="Mode_of_Shipment">Mode of Shipment:</label>
+        <input type="text" id="Mode_of_Shipment" name="Mode_of_Shipment" required><br><br>
+
+        <label for="Customer_care_calls">Customer Care Calls:</label>
+        <input type="number" id="Customer_care_calls" name="Customer_care_calls" required><br><br>
+
+        <label for="Customer_rating">Customer Rating:</label>
+        <input type="number" id="Customer_rating" name="Customer_rating" required><br><br>
+
+        <label for="Cost_of_the_Product">Cost of the Product:</label>
+        <input type="number" id="Cost_of_the_Product" name="Cost_of_the_Product" required><br><br>
+
+        <label for="Prior_purchases">Prior Purchases:</label>
+        <input type="number" id="Prior_purchases" name="Prior_purchases" required><br><br>
+
+        <label for="Product_importance">Product Importance:</label>
+        <input type="text" id="Product_importance" name="Product_importance" required><br><br>
+
+        <label for="Gender">Gender:</label>
+        <select id="Gender" name="Gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+
+        <label for="Discount_offered">Discount Offered:</label>
+        <input type="number" id="Discount_offered" name="Discount_offered" required><br><br>
+
+        <label for="Weight_in_gms">Weight in grams:</label>
+        <input type="number" id="Weight_in_gms" name="Weight_in_gms" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+     {% if prediction %}
+     <div class="prediction">
+         <p>{{ prediction }}</p>
+     </div>
+     {% endif %}
+</div>
+   
+{% endblock %}
